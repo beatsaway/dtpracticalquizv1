@@ -3,181 +3,291 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DT Instructions</title>
+  <title>DT Practical Instructions</title>
   <style>
+    :root {
+      --bg-primary: #f0f4f8;
+      --bg-secondary: #ffffff;
+      --text-primary: #2d3748;
+      --accent-color: #3182ce;
+      --success-color: #48bb78;
+      --error-color: #e53e3e;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
     body {
-      font-family: Arial, sans-serif;
-      line-height: 1;
-      background-color: #f9f9f9;
-      padding: 10px;
-    
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      background-color: var(--bg-primary);
+      color: var(--text-primary);
+      display: flex;
+      justify-content: center;
+      padding: 20px;
     }
+
+    .container {
+      max-width: 700px;
+      width: 100%;
+      background-color: var(--bg-secondary);
+      border-radius: 12px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      padding: 30px;
+    }
+
+    h1 {
+      text-align: center;
+      color: var(--accent-color);
+      margin-bottom: 20px;
+      font-weight: 600;
+    }
+
+    .instruction-block {
+      background-color: #f7fafc;
+      border-left: 4px solid var(--accent-color);
+      padding: 15px;
+      margin-bottom: 15px;
+      border-radius: 0 8px 8px 0;
+      transition: all 0.3s ease;
+    }
+
+    .instruction-block:hover {
+      background-color: #ebf8ff;
+    }
+
     select {
+      appearance: none;
+      background-color: #fff;
+      border: 1px solid var(--accent-color);
+      border-radius: 6px;
+      padding: 8px 12px;
       margin: 0 5px;
-      padding: 5px;
       font-size: 1em;
-      
+      cursor: pointer;
+      transition: all 0.3s ease;
     }
+
+    select:focus {
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(49, 130, 206, 0.3);
+    }
+
     .correct {
-      background-color: #d4edda;
+      background-color: var(--success-color);
+      color: white;
     }
+
     .incorrect {
-      background-color: #f8d7da;
+      background-color: var(--error-color);
+      color: white;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 15px;
+        margin: 0 10px;
+      }
+
+      select {
+        margin: 5px 0;
+        width: 100%;
+      }
     }
   </style>
 </head>
 <body>
-  <h1>DT Practical</h1>
-  <p>
-    Before practical, we tug chairs away, put 
-    <select data-answer="belongings">
-      <option> </option>
-      <option value="apron">aprons 👗</option>
-      <option value="belongings">belongings 👜</option>
-    </select> into cupboard, wear 
-    <select data-answer="apron">
-      <option> </option>
-      <option value="coats">coats 🥼</option>
-      <option value="apron">aprons 👗</option>
-    </select> and tie 
-    <select data-answer="long">
-      <option> </option>
-      <option value="short">short 💇</option>
-      <option value="long">long 💇‍♀️</option>
-    </select> hair.
-  
-    We should
-    <select data-answer="walk mindfully">
-      <option> </option>
-      <option value="walk mindfully">walk mindfully 🚶</option>
-      <option value="run around">run around 🏃</option>
-    </select> in the workshop. We should
-    <select data-answer="be quiet">
-      <option> </option>
-      <option value="scream">scream 😱</option>
-      <option value="be quiet">be quiet and safe🤫</option>
-    </select> in the workshop. We should
-    <select data-answer="focus on work">
-      <option> </option>
-      <option value="focus on work">focus on work🛠️</option>
-      <option value="chitchat">chitchat and distract others💬</option>
-    </select>.
-  </p>
-  <p>
-    Students
-    <select data-answer="following health and safety rules">
-      <option> </option>
-      <option value="following health and safety rules">following health and safety rules 👍</option>
-      <option value="causing health and safety concerns">causing health and safety concerns 👎</option>
-    </select> are welcome in the workshop.
-  </p>
-  <p>
-    To cut well with a coping saw, we put the piece 
-    <select data-answer="close to">
-      <option> </option>
-      <option value="far from">far from ⛰️</option>
-      <option value="close to">close to 👌</option>
-    </select> the vice and start 
-    <select data-answer="slowly">
-      <option> </option>
-      <option value="quickly">quickly 🐇</option>
-      <option value="slowly">slowly 🐢</option>
-    </select> to make a 
-    <select data-answer="narrow">
-      <option> </option>
-      <option value="wide">wide ➖➖➖</option>
-      <option value="narrow">narrow ➖</option>
-    </select> dent. The 
-    <select data-answer="pulling">
-      <option> </option>
-      <option value="pushing">pushing ➡️</option>
-      <option value="pulling">pulling ↩️</option>
-    </select> action is actually cutting because of saw teeth direction.
-  </p>
-  <p>
-    The disc sander cannot sand a side if it is in a <select data-answer="concave">
-        <option> </option><option value="convex">convex</option><option value="concave">concave</option></select> corner. If the piece is too small, use 
-    <select data-answer="long sticks">
-      <option> </option>
-      <option value="your fingers">your fingers ✌️</option>
-      <option value="long sticks">long sticks 🥢</option>
-    </select> to hold it.
-  </p>
-  <p>
-    We use the pillar drill 
-    <select data-answer="before">
-      <option> </option>
-      <option value="right after">right after 🕰️</option>
-      <option value="before">before ⏱️</option>
-    </select> we glue and paint pieces wet.
-  </p>
-  <p>
-    Users should wear 
-    <select data-answer="safety goggles">
-      <option> </option>
-      <option value="sun glasses">sun glasses 🕶️</option>
-      <option value="safety goggles">safety goggles 🥽</option>
-    </select> to protect eyes from flying debris and 
-    <select data-answer="wood dust">
-      <option> </option>
-      <option value="dirty stuff">dirty stuff 💩</option>
-      <option value="wood dust">wood dust 💨🤮</option>
-    </select>.
-  </p>
-  <p>
-    We use 
-    <select data-answer="cross">
-      <option> </option>
-      <option value="draw">draw ➖</option>
-      <option value="cross">cross ➕</option>
-    </select> filing to reshape material. We use 
-    <select data-answer="draw">
-      <option> </option>
-      <option value="cross">cross ➕</option>
-      <option value="draw">draw ➖</option>
-    </select> filing to smoothen it. We use sandpaper 
-    <select data-answer="last">
-      <option> </option>
-      <option value="first">first </option>
-      <option value="last">last </option>
-    </select> in the sanding process.
-  </p>
-  <p>
-    To paint wood pieces, we must have a 
-    <select data-answer="water mug">
-      <option> </option>
-      <option value="cooking pan">pan 🍳</option>
-      <option value="water mug">water mug 💧</option>
-    </select>, a 
-    <select data-answer="paintbrush">
-      <option> </option>
-      <option value="toothbrush">toothbrush 🪥</option>
-      <option value="paintbrush">paintbrush 🖌️</option>
-    </select>, a 
-    <select data-answer="palette">
-      <option> </option>
-      <option value="bowl">bowl 🍜</option>
-      <option value="palette">palette 🎨</option>
-    </select>, and a 
-    <select data-answer="paintmat">
-      <option> </option>
-      <option value="yogamat">yoga mat </option>
-      <option value="paintmat">paint mat</option>
-    </select>. We rinse the brush with 
-    <select data-answer="water">
-      <option> </option>
-      <option value="fire">fire 🔥</option>
-      <option value="water">water 💧</option>
-    </select> before using a different colour.
-  </p>
-  <p>
-    Too 
-    <select data-answer="much">
-      <option> </option>
-      <option value="little">little ➖</option>
-      <option value="much">much ➕</option>
-    </select> PVA glue will leave a shiny mark or even bulk on edges. We glue then use masking tape to fix pieces' positions.
-  </p>
+  <div class="container">
+    <h1>DT Practical Instructions</h1>
+    
+    <div class="instruction-block">
+      <p>
+        Before practical, we tug chairs away, put 
+        <select data-answer="belongings">
+          <option> </option>
+          <option value="apron">aprons 👗</option>
+          <option value="belongings">belongings 👜</option>
+        </select> into cupboard, wear 
+        <select data-answer="apron">
+          <option> </option>
+          <option value="coats">coats 🥼</option>
+          <option value="apron">aprons 👗</option>
+        </select> and tie 
+        <select data-answer="long">
+          <option> </option>
+          <option value="short">short 💇</option>
+          <option value="long">long 💇‍♀️</option>
+        </select> hair.
+      </p>
+    </div>
+
+    <div class="instruction-block">
+      <p>
+        We should
+        <select data-answer="walk mindfully">
+          <option> </option>
+          <option value="walk mindfully">walk mindfully 🚶</option>
+          <option value="run around">run around 🏃</option>
+        </select> in the workshop. We should
+        <select data-answer="be quiet">
+          <option> </option>
+          <option value="scream">scream 😱</option>
+          <option value="be quiet">be quiet and safe🤫</option>
+        </select> in the workshop. We should
+        <select data-answer="focus on work">
+          <option> </option>
+          <option value="focus on work">focus on work🛠️</option>
+          <option value="chitchat">chitchat and distract others💬</option>
+        </select>.
+      </p>
+    </div>
+
+    <div class="instruction-block">
+      <p>
+        Students
+        <select data-answer="following health and safety rules">
+          <option> </option>
+          <option value="following health and safety rules">following health and safety rules 👍</option>
+          <option value="causing health and safety concerns">causing health and safety concerns 👎</option>
+        </select> are welcome in the workshop.
+      </p>
+    </div>
+
+    <div class="instruction-block">
+      <p>
+        To cut well with a coping saw, we put the piece 
+        <select data-answer="close to">
+          <option> </option>
+          <option value="far from">far from ⛰️</option>
+          <option value="close to">close to 👌</option>
+        </select> the vice and start 
+        <select data-answer="slowly">
+          <option> </option>
+          <option value="quickly">quickly 🐇</option>
+          <option value="slowly">slowly 🐢</option>
+        </select> to make a 
+        <select data-answer="narrow">
+          <option> </option>
+          <option value="wide">wide ➖➖➖</option>
+          <option value="narrow">narrow ➖</option>
+        </select> dent. The 
+        <select data-answer="pulling">
+          <option> </option>
+          <option value="pushing">pushing ➡️</option>
+          <option value="pulling">pulling ↩️</option>
+        </select> action is actually cutting because of saw teeth direction.
+      </p>
+    </div>
+
+    <div class="instruction-block">
+      <p>
+        The disc sander cannot sand a side if it is in a 
+        <select data-answer="concave">
+          <option> </option>
+          <option value="convex">convex</option>
+          <option value="concave">concave</option>
+        </select> corner. If the piece is too small, use 
+        <select data-answer="long sticks">
+          <option> </option>
+          <option value="your fingers">your fingers ✌️</option>
+          <option value="long sticks">long sticks 🥢</option>
+        </select> to hold it.
+      </p>
+    </div>
+
+    <div class="instruction-block">
+      <p>
+        We use the pillar drill 
+        <select data-answer="before">
+          <option> </option>
+          <option value="right after">right after 🕰️</option>
+          <option value="before">before ⏱️</option>
+        </select> we glue and paint pieces wet.
+      </p>
+    </div>
+
+    <div class="instruction-block">
+      <p>
+        Users should wear 
+        <select data-answer="safety goggles">
+          <option> </option>
+          <option value="sun glasses">sun glasses 🕶️</option>
+          <option value="safety goggles">safety goggles 🥽</option>
+        </select> to protect eyes from flying debris and 
+        <select data-answer="wood dust">
+          <option> </option>
+          <option value="dirty stuff">dirty stuff 💩</option>
+          <option value="wood dust">wood dust 💨🤮</option>
+        </select>.
+      </p>
+    </div>
+
+    <div class="instruction-block">
+      <p>
+        We use 
+        <select data-answer="cross">
+          <option> </option>
+          <option value="draw">draw ➖</option>
+          <option value="cross">cross ➕</option>
+        </select> filing to reshape material. We use 
+        <select data-answer="draw">
+          <option> </option>
+          <option value="cross">cross ➕</option>
+          <option value="draw">draw ➖</option>
+        </select> filing to smoothen it. We use sandpaper 
+        <select data-answer="last">
+          <option> </option>
+          <option value="first">first </option>
+          <option value="last">last </option>
+        </select> in the sanding process.
+      </p>
+    </div>
+
+    <div class="instruction-block">
+      <p>
+        To paint wood pieces, we must have a 
+        <select data-answer="water mug">
+          <option> </option>
+          <option value="cooking pan">pan 🍳</option>
+          <option value="water mug">water mug 💧</option>
+        </select>, a 
+        <select data-answer="paintbrush">
+          <option> </option>
+          <option value="toothbrush">toothbrush 🪥</option>
+          <option value="paintbrush">paintbrush 🖌️</option>
+        </select>, a 
+        <select data-answer="palette">
+          <option> </option>
+          <option value="bowl">bowl 🍜</option>
+          <option value="palette">palette 🎨</option>
+        </select>, and a 
+        <select data-answer="paintmat">
+          <option> </option>
+          <option value="yogamat">yoga mat </option>
+          <option value="paintmat">paint mat</option>
+        </select>. We rinse the brush with 
+        <select data-answer="water">
+          <option> </option>
+          <option value="fire">fire 🔥</option>
+          <option value="water">water 💧</option>
+        </select> before using a different colour.
+      </p>
+    </div>
+
+    <div class="instruction-block">
+      <p>
+        Too 
+        <select data-answer="much">
+          <option> </option>
+          <option value="little">little ➖</option>
+          <option value="much">much ➕</option>
+        </select> PVA glue will leave a shiny mark or even bulk on edges. We glue then use masking tape to fix pieces' positions.
+      </p>
+    </div>
+  </div>
 
   <script>
     document.querySelectorAll('select').forEach(select => {
